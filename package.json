@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prod": "docker compose --env-file .env.prod up --build -d",
     "dev": "docker compose --env-file .env.dev up --build -d"
   },
   "keywords": [],

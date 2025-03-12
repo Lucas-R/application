@@ -28,6 +28,7 @@ services:
       args:
         EXPORT: ${BACKEND_CONTAINER_PORT}
     environment:
+      STAGE: ${STAGE}
       BACKEND_PORT: ${BACKEND_HOST_PORT}
       BACKEND_HOST: ${BACKEND_HOST}
       DB_HOST: database
