@@ -1,0 +1,12 @@
+{
+  "name": "application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "docker compose --env-file .env.dev up --build -d"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
