@@ -1,4 +1,4 @@
-import { UserRepository } from "../database/repositories/UserRepository";
+import { UserRepository } from "../../database/repositories/UserRepository";
 
 class UserDeleteService {
     async execute(id: string) {

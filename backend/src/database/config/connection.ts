@@ -12,7 +12,7 @@ export const connection = new DataSource({
     password: DB_PASSWORD,
     database: DB_NAME,
     synchronize: false,
-    logging: true,
+    logging: false,
     entities: [join(__dirname , "../entities/**/*.{ts,js}")],
     migrations: [join(__dirname,  "../migrations/**/*.{ts,js}")],
     subscribers: [join(__dirname,  "../subscribers/**/*.{ts,js}")]
