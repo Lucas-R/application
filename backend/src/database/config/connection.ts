@@ -11,7 +11,7 @@ export const connection = new DataSource({
     username: DB_USER,
     password: DB_PASSWORD,
     database: DB_NAME,
-    synchronize: STAGE === "development" ? true : false,
+    synchronize: false,
     logging: true,
     entities: [join(__dirname , "../entities/**/*.{ts,js}")],
     migrations: [join(__dirname,  "../migrations/**/*.{ts,js}")],
