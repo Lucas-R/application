@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import UserUpdateService from "../services/UserUpdate.service";
-import { UserSchema } from "../database/schemas/UserSchema";
+import UserUpdateService from "../../services/user/UserUpdate.service";
+import { UserSchema } from "../../schemas/UserSchema";
 
 
 class UserUpdateController {

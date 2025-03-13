@@ -1,4 +1,4 @@
-import UserFindService from "../services/UserFind.service";
+import UserFindService from "../../services/user/UserFind.service";
 
 class UserFindController {
     async handle() {

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import UserFindOneService from "../services/UserFindOne.service";
+import UserFindOneService from "../../services/user/UserFindOne.service";
 
 
 class UserFindOneController {

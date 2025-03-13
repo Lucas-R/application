@@ -1,5 +1,5 @@
 import { MigrationInterface, QueryRunner, Table } from "typeorm";
-import { UserRole } from "../schemas/UserSchema";
+import { UserRole } from "../../schemas/UserSchema";
 
 export class CreateTableUser1741826038022 implements MigrationInterface {
 

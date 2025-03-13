@@ -5,7 +5,7 @@ import {
     CreateDateColumn, 
     UpdateDateColumn 
 } from "typeorm";
-import { UserRole, UserSchema } from "../schemas/UserSchema";
+import { UserRole, UserSchema } from "../../schemas/UserSchema";
 
 @Entity('user')
 export class User implements UserSchema {

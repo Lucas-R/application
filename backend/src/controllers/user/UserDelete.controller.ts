@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import UserDeleteService from "../services/UserDelete.service";
+import UserDeleteService from "../../services/user/UserDelete.service";
 
 
 class UserDeleteController {
