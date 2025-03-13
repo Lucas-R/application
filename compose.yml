@@ -43,6 +43,7 @@ services:
       - ${BACKEND_HOST_PORT}:${BACKEND_CONTAINER_PORT}
     depends_on:
       - database
+    restart: unless-stopped
     networks:
       - app-network
   
