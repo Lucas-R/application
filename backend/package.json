@@ -7,9 +7,9 @@
     "build": "tsc",
     "dev": "nodemon",
     "typeorm": "typeorm-ts-node-commonjs",
-    "m:create": "cross-env npx typeorm migration:create src/database/migrations/$npm_config_name",
     "m:run": "npx typeorm migration:run -d ./dist/database/config/connection.js",
     "m:revert": "npx typeorm migration:revert -d ./dist/database/config/connection.js",
+    "m:create": "cross-env npx typeorm migration:create src/database/migrations/$npm_config_name",
     "e:create": "cross-env npx typeorm entity:create src/database/entities/$npm_config_name",
     "s:create": "cross-env npx typeorm subscriber:create src/database/subscribers/$npm_config_name"
   },

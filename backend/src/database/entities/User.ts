@@ -21,7 +21,7 @@ export class User implements UserSchema {
     @Column()
     password!: string;
 
-    @Column()
+    @Column({ default: UserRole.NORMAL })
     role?: UserRole;
 
     @CreateDateColumn()
