@@ -29,6 +29,7 @@ services:
         EXPORT: ${BACKEND_CONTAINER_PORT}
     environment:
       STAGE: ${STAGE}
+      JWT_SECRET: ${JWT_SECRET}
       BACKEND_PORT: ${BACKEND_HOST_PORT}
       BACKEND_HOST: ${BACKEND_HOST}
       DB_HOST: database
@@ -43,6 +44,7 @@ services:
       - ${BACKEND_HOST_PORT}:${BACKEND_CONTAINER_PORT}
     depends_on:
       - database
+    restart: unless-stopped
     networks:
       - app-network
   
