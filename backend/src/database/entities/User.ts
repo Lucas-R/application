@@ -3,9 +3,11 @@ import {
     PrimaryGeneratedColumn, 
     Column, 
     CreateDateColumn, 
-    UpdateDateColumn 
+    UpdateDateColumn, 
+    OneToMany
 } from "typeorm";
 import { UserRole, UserSchema } from "../../schemas/UserSchema";
+import { Health } from "./Health";
 
 @Entity('user')
 export class User implements UserSchema {

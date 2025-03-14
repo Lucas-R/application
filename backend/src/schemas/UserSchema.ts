@@ -1,3 +1,6 @@
+import { Health } from "../database/entities/Health"
+import { HealthSchema } from "./HealthSchema"
+
 export enum UserRole {
     NORMAL  = "normal",
     ADMIN   = "admin",

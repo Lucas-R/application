@@ -9,7 +9,7 @@ class UserCreateService {
             password: await hash(body.password)
         });
         const user = await UserRepository.save(create);
-        return user;
+        return user.id;
     }
 }
 
