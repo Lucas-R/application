@@ -31,4 +31,7 @@ export class User implements UserSchema {
 
     @UpdateDateColumn()
     updated_at?: Date;
+
+    @OneToMany(() => Health, (health) => health.user)
+    healths?: Health[];
 }

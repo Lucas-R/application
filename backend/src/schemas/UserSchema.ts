@@ -13,6 +13,7 @@ export interface UserSchema {
     email: string
     password: string
     role?: UserRole
+    healths?: HealthSchema[]
     created_at?: Date
     updated_at?: Date
 }

@@ -3,9 +3,12 @@ import {
     PrimaryGeneratedColumn, 
     Column, 
     CreateDateColumn, 
-    UpdateDateColumn 
+    UpdateDateColumn, 
+    ManyToOne,
+    JoinColumn
 } from "typeorm"
 import { HealthSchema } from "../../schemas/HealthSchema";
+import { User } from "./User";
 
 @Entity()
 export class Health implements HealthSchema {
@@ -20,13 +23,14 @@ export class Health implements HealthSchema {
     
     @Column()
     date?: Date;
-    
-    @Column()
-    user_id!: string;
 
     @CreateDateColumn()
     created_at?: Date;
 
     @UpdateDateColumn()
     updated_at?: Date;
+
+    @ManyToOne(() => User)
+    @JoinColumn({ name: 'user_id' })
+    user!: User;
 }

@@ -1,4 +1,3 @@
-import { HealthRepository } from "../../database/repositories/HealthRepository";
 import { UserRepository } from "../../database/repositories/UserRepository";
 
 class UserFindOneService {
@@ -6,29 +5,25 @@ class UserFindOneService {
         const user = await UserRepository.findOne({ 
             where: { id },
             select: {
-                id: false,
+                id: true,
                 name: true,
                 email: true,
                 password: false,
                 role: true,
                 created_at: true,
-                updated_at: true
-            }
-        });
-        const health = await HealthRepository.find({ 
-            where: { 
-                user_id: id 
+                updated_at: true,
+                healths: {
+                    id: true,
+                    title: true,
+                    description: true,
+                    date: true,
+                    created_at: false,
+                    updated_at: false
+                }
             },
-            select: {
-                id: true,
-                title: true,
-                description: true,
-                date: true,
-                created_at: false,
-                updated_at: false
-            }
+            relations: ['healths']
         });
-        return {...user, health};
+        return user;
     }
 }
 
